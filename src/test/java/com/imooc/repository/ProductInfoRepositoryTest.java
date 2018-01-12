@@ -1,17 +1,13 @@
 package com.imooc.repository;
 
-import com.imooc.pojo.ProductInfo;
-import org.junit.Assert;
+import com.imooc.dataobject.ProductInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runner.Runner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
-
-import static org.junit.Assert.*;
 
 /**
  * @Author: Huang

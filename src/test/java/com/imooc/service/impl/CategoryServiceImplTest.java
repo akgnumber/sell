@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
  * @Date: Create in 10:42$ 2017/12/28$
  * @Modified By:
  */
-public class ProductCategoryServiceImplTest {
+public class CategoryServiceImplTest {
 
     @Test
     public void findOne() {

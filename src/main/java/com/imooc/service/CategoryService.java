@@ -1,6 +1,6 @@
 package com.imooc.service;
 
-import com.imooc.pojo.ProductCategory;
+import com.imooc.dataobject.ProductCategory;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * @Date: Create in 9:28$ 2017/12/28$
  * @Modified By:
  */
-public interface ProductCategoryService {
+public interface CategoryService {
 
     ProductCategory findOne(Integer productCategoryId);
 

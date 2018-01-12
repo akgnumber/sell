@@ -1,8 +1,8 @@
 package com.imooc.service.impl;
 
-import com.imooc.pojo.ProductCategory;
+import com.imooc.dataobject.ProductCategory;
 import com.imooc.repository.ProductCategoryRepository;
-import com.imooc.service.ProductCategoryService;
+import com.imooc.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.List;
  * @Modified By:
  */
 @Service
-public class ProductCategoryServiceImpl implements ProductCategoryService{
+public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private ProductCategoryRepository productCategoryRepository;
 

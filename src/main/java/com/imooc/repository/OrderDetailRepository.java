@@ -1,7 +1,9 @@
 package com.imooc.repository;
 
-import com.imooc.pojo.OrderDetail;
+import com.imooc.dataobject.OrderDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 
 /**
  * @Author: Huang
@@ -10,5 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Modified By:
  */
 public interface OrderDetailRepository extends JpaRepository<OrderDetail,String> {
+
+    List<OrderDetail> findByOrderId(String orderId);
 
 }

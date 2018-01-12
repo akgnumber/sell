@@ -1,4 +1,4 @@
-package com.imooc.pojo;
+package com.imooc.dataobject;
 
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
