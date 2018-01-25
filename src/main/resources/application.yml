@@ -3,9 +3,11 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: eapor
     password: eapor
-    url: jdbc:mysql://123.57.248.31:3306/sell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://106.15.47.28:3306/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+  jackson:          #配置返回json 为null的时候不返回key
+    default-property-inclusion: non_null
 server:
   context-path: /sell
 #logging:
@@ -13,3 +15,11 @@ server:
 #    console: "%d - %msg%n"
 ##  path: D:\log
 #  file: D:\log\sell.log
+
+wechat:
+  mpAppId: wx940114661cdb1cee
+  mpAppSecret: 9d1d681684e942eaa8b5e76ad3832953
+  mchId: id
+  mchKey: key
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://sell.natapp4.css/sell/pay/notify

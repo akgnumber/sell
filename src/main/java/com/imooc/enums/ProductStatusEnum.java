@@ -9,7 +9,7 @@ import lombok.Getter;
  * @Modified By:
  */
 @Getter
-public enum ProductStausEnum {
+public enum ProductStatusEnum implements CodeEnum{
 
     UP(0,"在架"),
     DOWN(1,"下架")
@@ -18,11 +18,11 @@ public enum ProductStausEnum {
 
     private String message;
 
-    ProductStausEnum(Integer code) {
+    ProductStatusEnum(Integer code) {
         this.code = code;
     }
 
-    ProductStausEnum(Integer code,String message) {
+    ProductStatusEnum(Integer code,String message) {
         this.code = code;
         this.message = message;
     }

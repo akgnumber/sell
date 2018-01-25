@@ -1,7 +1,7 @@
 package com.imooc.service.impl;
 
 import com.imooc.dto.CartDTO;
-import com.imooc.enums.ProductStausEnum;
+import com.imooc.enums.ProductStatusEnum;
 import com.imooc.dataobject.ProductInfo;
 import com.imooc.enums.ResultEnum;
 import com.imooc.exception.SellException;
@@ -33,7 +33,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductInfo> findUpAll() {
-        return productInfoRepository.findByProductStatus(ProductStausEnum.UP.getCode());
+        return productInfoRepository.findByProductStatus(ProductStatusEnum.UP.getCode());
     }
 
     @Override
@@ -78,5 +78,33 @@ public class ProductServiceImpl implements ProductService {
             productInfo.setProductStock(result);
             productInfoRepository.save(productInfo);
         }
+    }
+
+    @Override
+    public ProductInfo onSale(String productId) {
+        ProductInfo productInfo = productInfoRepository.findOne(productId);
+        if (productInfo == null) {
+            throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+        }
+        if (productInfo.getProductStatusEnum() == ProductStatusEnum.UP) {
+            throw new SellException(ResultEnum.PRODUCT_STATUS_ERROR);
+        }
+        //更新
+        productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
+        return productInfoRepository.save(productInfo);
+    }
+
+    @Override
+    public ProductInfo offSale(String productId) {
+        ProductInfo productInfo = productInfoRepository.findOne(productId);
+        if (productInfo == null) {
+            throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+        }
+        if (productInfo.getProductStatusEnum() == ProductStatusEnum.DOWN) {
+            throw new SellException(ResultEnum.PRODUCT_STATUS_ERROR);
+        }
+        //更新
+        productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
+        return productInfoRepository.save(productInfo);
     }
 }

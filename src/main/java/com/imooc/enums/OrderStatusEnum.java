@@ -1,5 +1,6 @@
 package com.imooc.enums;
 
+import com.imooc.util.EnumUtil;
 import lombok.Getter;
 
 /**
@@ -9,7 +10,7 @@ import lombok.Getter;
  * @Modified By:
  */
 @Getter
-public enum  OrderStatusEnum {
+public enum  OrderStatusEnum implements CodeEnum{
 
     NEW(0,"新订单"),
     FINISHED(1,"完结"),
@@ -23,4 +24,5 @@ public enum  OrderStatusEnum {
         this.code = code;
         this.msg = msg;
     }
+
 }
