@@ -8,6 +8,10 @@ spring:
     show-sql: true
   jackson:          #配置返回json 为null的时候不返回key
     default-property-inclusion: non_null
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
 server:
   context-path: /sell
 #logging:
@@ -23,3 +27,8 @@ wechat:
   mchKey: key
   keyPath: /var/weixin_cert/h5.p12
   notifyUrl: http://sell.natapp4.css/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorize:  http://sell.natapp4.cc
+  wechatOpenAuthorize: http://sell.natapp4.cc
+  sell: sell

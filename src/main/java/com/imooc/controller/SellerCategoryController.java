@@ -1,10 +1,9 @@
-package com.imooc.contoller;
+package com.imooc.controller;
 
 import com.imooc.dataobject.ProductCategory;
 import com.imooc.exception.SellException;
 import com.imooc.form.CategoryForm;
 import com.imooc.service.CategoryService;
-import com.lly835.bestpay.rest.type.Get;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
