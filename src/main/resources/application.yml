@@ -32,3 +32,5 @@ projectUrl:
   wechatMpAuthorize:  http://sell.natapp4.cc
   wechatOpenAuthorize: http://sell.natapp4.cc
   sell: sell
+mybatis:
+  mapper-locations: classpath:*.xml
